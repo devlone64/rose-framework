@@ -22,6 +22,14 @@ dependencies {
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
+    java.sourceCompatibility = JavaVersion.VERSION_17
+    java.targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType<Javadoc> {
+    (options as StandardJavadocDocletOptions).addStringOption("Xdoclint:none", "-quiet")
+    (options as StandardJavadocDocletOptions).addStringOption("encoding", "UTF-8")
+    (options as StandardJavadocDocletOptions).addStringOption("charSet", "UTF-8")
 }
 
 tasks.shadowJar {
