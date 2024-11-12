@@ -1,0 +1,7 @@
+/.idea/
+/.gradle/
+
+/modules/Spigot/build/
+/modules/Plugin/build/
+
+/modules/Spigot/gradle.properties
