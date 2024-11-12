@@ -47,14 +47,14 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "dev.lone64"
-            artifactId = "rose-framework-spigot"
+            artifactId = "rose-framework"
             from(components["java"])
         }
     }
 
     repositories {
         maven {
-            url = uri("https://repo.repsy.io/mvn/lone64/public")
+            url = uri("https://repo.repsy.io/mvn/lone64/public/")
             credentials {
                 username = "${properties["maven.username"]}"
                 password = "${properties["maven.password"]}"
